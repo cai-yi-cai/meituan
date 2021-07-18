@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>hello</title>
+	</head>
+	<body>
+		<div id="app">
+			{{msg}}
+			{{count+1}}
+			{{isOk?"ok":"no"}}
+		</div>
+		<!--引入vue.js文件-->
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!--写vue语法-->
+		<script>
+			//创建vue实例
+			let vm = new Vue({
+				//el:挂载元素，挂到id=“app”上
+				el:"#app",
+				//data：用于存放数据
+				data:{
+					msg:"你好，Vue！",
+					count:1,
+					isOk:true
+				}
+			})
+			console.log(vm.msg);
+			console.log(vm.$el);
+			console.log(vm.$data)
+		</script>
+	</body>
+</html>
